@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Student_Ragistration">
+
+    <RelativeLayout
+        android:layout_width="408dp"
+        android:layout_height="572dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="79dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="119dp"
+            android:layout_toStartOf="@+id/submit"
+            android:text="@string/name"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp"
+            tools:textColor="@android:color/background_dark" />
+
+        <TextView
+            android:id="@+id/rollno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/name"
+            android:layout_marginTop="176dp"
+            android:text="@string/rollno"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/full_name"
+            android:layout_width="237dp"
+            android:layout_height="43dp"
+            android:layout_alignLeft="@+id/roll_no"
+            android:layout_alignStart="@+id/roll_no"
+            android:layout_alignTop="@+id/name"
+            android:ems="10"
+            android:hint="@string/full_name"
+            android:inputType="textPersonName"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/roll_no"
+            android:layout_width="237dp"
+            android:layout_height="43dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/rollno"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/roll_no"
+            android:inputType="textPersonName"
+            android:textSize="18sp"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/branch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/name"
+            android:layout_marginTop="224dp"
+            android:text="@string/branc"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/bran"
+            android:layout_width="237dp"
+            android:layout_height="43dp"
+            android:layout_alignLeft="@+id/full_name"
+            android:layout_alignStart="@+id/full_name"
+            android:layout_alignTop="@+id/branch"
+            android:ems="10"
+            android:hint="@string/branch"
+            android:inputType="textPersonName"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/samester"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/name"
+            android:layout_centerVertical="true"
+            android:text="@string/sameste"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/sem"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_alignEnd="@+id/full_name"
+            android:layout_alignRight="@+id/full_name"
+            android:layout_alignTop="@+id/samester"
+            android:ems="10"
+            android:hint="@string/samester"
+            android:inputType="textPersonName"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/name"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/name"
+            android:layout_marginBottom="215dp"
+            android:text="@string/emailid"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/emailid"
+            android:layout_width="220dp"
+            android:layout_height="43dp"
+            android:layout_alignEnd="@+id/full_name"
+            android:layout_alignRight="@+id/full_name"
+            android:layout_alignTop="@+id/email"
+            android:ems="10"
+            android:hint="@string/email_id"
+            android:inputType="textEmailAddress"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="141dp"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="31dp"
+            android:text="@string/submit" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/name"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/name"
+            android:layout_marginBottom="153dp"
+            android:text="@string/password"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_alignEnd="@+id/full_name"
+            android:layout_alignRight="@+id/full_name"
+            android:layout_alignTop="@+id/textView5"
+            android:ems="10"
+            android:hint="@string/pass"
+            android:inputType="textPassword"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="39dp"
+            android:layout_marginTop="51dp"
+            android:text="STUDENT'S RAGISTRATION"
+            android:textColor="@android:color/background_dark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

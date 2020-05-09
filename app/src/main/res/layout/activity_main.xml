@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="392dp"
+        android:layout_height="581dp"
+        android:background="?android:attr/statusBarColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="137dp"
+            android:layout_height="64dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/create"
+            android:layout_marginTop="136dp"
+            android:background="@android:color/holo_orange_light"
+            android:text="ADMIN"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/emailid"
+            android:layout_width="338dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="225dp"
+            android:ems="10"
+            android:hint="user name "
+            android:inputType="textEmailAddress"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="336dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="228dp"
+            android:ems="10"
+            android:hint="password"
+            android:inputType="numberPassword"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/tea_btn"
+            android:layout_width="130dp"
+            android:layout_height="66dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/button3"
+            android:layout_marginEnd="45dp"
+            android:background="@android:color/holo_orange_light"
+            android:text="TEACHER"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/create"
+            android:layout_width="277dp"
+            android:layout_height="74dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="33dp"
+            android:background="@android:color/holo_orange_light"
+            android:text="create new account "
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/loginbtn"
+            android:layout_width="277dp"
+            android:layout_height="74dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="121dp"
+            android:background="@android:color/holo_orange_light"
+            android:text="LOGIN"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="57dp"
+            android:autoText="false"
+            android:text="LOGIN PAGE"
+            android:textColor="@android:color/holo_red_dark"
+            android:textColorLink="@android:color/holo_red_dark"
+            android:textSize="36sp" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
