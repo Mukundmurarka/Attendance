@@ -1,6 +1,7 @@
 package com.example.mukundmurarka.attendance;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ public class AddStudent extends AppCompatActivity {
     Button ok;
     detailsofstudent studentdetail;
     SQLiteDatabase database;
+    Cursor cursor;
 
 
     @Override
@@ -42,12 +44,13 @@ public class AddStudent extends AppCompatActivity {
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               if (TextUtils.isEmpty(name_s) || TextUtils.isEmpty(rollno_s) || TextUtils.isEmpty(branch_st) || TextUtils.isEmpty(seme_s) || TextUtils.isEmpty(mobile_st)){
+               if (TextUtils.isEmpty(e1.getText().toString()) ){
                    Toast.makeText(AddStudent.this , "fill all the field", Toast.LENGTH_SHORT).show();
                }
                else{
                     studentdetail = new detailsofstudent(AddStudent.this);
-
+                    studentdetail.addData(name_s,rollno_s,branch_st,seme_s,mobile_st);
+                    Toast.makeText(AddStudent.this, "add successfully", Toast.LENGTH_SHORT).show();
 
                }
             }
