@@ -8,11 +8,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class detailsofstudent extends SQLiteOpenHelper {
-
-
-    detailsofstudent(Context context){
-        super(context,"STUDETAIL",null,1);
+    public detailsofstudent(Context context) {
+        super(context, "USER", null, 1);
     }
+
+
+//    public detailsofstudent(Context context){
+//        super(context,"USER",null,1);
+//    }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {

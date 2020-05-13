@@ -1,5 +1,6 @@
 package com.example.mukundmurarka.attendance;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -17,6 +18,7 @@ public class AddStudent extends AppCompatActivity {
     detailsofstudent studentdetail;
     SQLiteDatabase database;
     Cursor cursor;
+    Context context;
 
 
     @Override
@@ -30,13 +32,14 @@ public class AddStudent extends AppCompatActivity {
         e4 = (EditText)findViewById(R.id.sem_s);
         e5 = (EditText)findViewById(R.id.mobile_s);
         ok = (Button)findViewById(R.id.btn_s);
+        context = AddStudent.this;
 
 
-        final String name_s = e1.getText().toString().trim();
-        final String rollno_s = e2.getText().toString().trim();
-        final String branch_st = e3.getText().toString().trim();
-        final String seme_s = e4.getText().toString().trim();
-        final String mobile_st =  e5.getText().toString().trim();
+//        final String name_s = e1.getText().toString().trim();
+//        final String rollno_s = e2.getText().toString().trim();
+//        final String branch_st = e3.getText().toString().trim();
+//        final String seme_s = e4.getText().toString().trim();
+//        final String mobile_st =  e5.getText().toString().trim();
 
 
 
@@ -49,7 +52,9 @@ public class AddStudent extends AppCompatActivity {
                }
                else{
                     studentdetail = new detailsofstudent(AddStudent.this);
-                    studentdetail.addData(name_s,rollno_s,branch_st,seme_s,mobile_st);
+                    studentdetail.addData(e1.getText().toString().trim(),e2.getText().toString().trim(),e3.getText().toString().trim(),e4.getText().toString().trim(),e5.getText().toString().trim());
+                   Intent intent1 = new Intent(AddStudent.this, StudentList.class);
+                   startActivity(intent1);
                     Toast.makeText(AddStudent.this, "add successfully", Toast.LENGTH_SHORT).show();
 
                }
