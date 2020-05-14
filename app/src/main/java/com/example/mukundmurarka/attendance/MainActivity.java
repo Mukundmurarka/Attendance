@@ -134,7 +134,10 @@ public class MainActivity extends AppCompatActivity {
 //            finish();
             Toast.makeText(MainActivity.this , "please login ", Toast.LENGTH_SHORT).show();
 
-        }
+       }
+// else{
+//            Intent intent = new Intent(MainActivity.this, Start_page.cla)
+//        }
 
     }
 

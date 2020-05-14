@@ -1,6 +1,9 @@
 package com.example.mukundmurarka.attendance;
 
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
@@ -20,6 +23,14 @@ public class Main3Activity extends AppCompatActivity {
     private EditText teach_name, teach_email, teach_pass;
     Button submit;
     public FirebaseAuth mAuth;
+    Teacherdetail detaiteacher;
+
+    SQLiteOpenHelper sqlitedatabase;
+    Context context;
+    Cursor cursor;
+
+
+
 
 
     @Override
@@ -31,6 +42,8 @@ public class Main3Activity extends AppCompatActivity {
         teach_email =  (EditText)findViewById(R.id.tea_email);
         teach_pass = (EditText)findViewById(R.id.tea_pass);
         submit = (Button)findViewById(R.id.button);
+
+        context = Main3Activity.this;
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -54,7 +67,10 @@ public class Main3Activity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Intent intent = new Intent(Main3Activity.this,MainActivity.class);
+                    detaiteacher = new Teacherdetail(Main3Activity.this);
+                    detaiteacher.addData(teach_name.getText().toString().trim(),teach_email.getText().toString().trim(),teach_pass.getText().toString().trim());
+
+                    Intent intent = new Intent(Main3Activity.this,TEACHERLIST.class);
                     startActivity(intent);
                     finish();
                 }else{

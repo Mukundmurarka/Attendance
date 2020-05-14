@@ -39,6 +39,23 @@ public class Start_page extends AppCompatActivity {
         });
 
 
+        addfeaculty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (Start_page.this, Main3Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        viewfeaculty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Start_page.this, TEACHERLIST.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 }
