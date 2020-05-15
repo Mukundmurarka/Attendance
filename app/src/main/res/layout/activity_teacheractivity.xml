@@ -7,38 +7,33 @@
     tools:context=".Teacheractivity">
 
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="314dp"
-        android:layout_height="60dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:ems="10"
-        android:hint="Teacher's name"
-        android:inputType="textPersonName"
+    <Button
+        android:id="@+id/viewatt"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_centerInParent="true"
+        android:autoText="false"
+        android:text="VIEW ATTENDANE"
         android:textSize="24sp" />
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="314dp"
-        android:layout_height="60dp"
-        android:layout_alignParentTop="true"
+    <Button
+        android:id="@+id/addatt"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="167dp"
-        android:ems="10"
-        android:hint="Subject"
-        android:inputType="textPersonName" />
+        android:layout_marginBottom="160dp"
+        android:text="ADD ATTENDANE"
+        android:textSize="24sp" />
 
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="73dp"
-        android:layout_marginTop="242dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+    <Button
+        android:id="@+id/totalatt"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="75dp"
+        android:text="TOTAL ATTENDANE"
+        android:textSize="24sp" />
+
 </RelativeLayout>
