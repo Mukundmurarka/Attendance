@@ -25,7 +25,8 @@
         <activity android:name=".TEACHERLIST" />
         <activity android:name=".Viewattendance" />
         <activity android:name=".AddAttendance" />
-        <activity android:name=".TotalAttendance"></activity>
+        <activity android:name=".TotalAttendance" />
+        <activity android:name=".AttendanceActivity"></activity>
     </application>
 
 </manifest>

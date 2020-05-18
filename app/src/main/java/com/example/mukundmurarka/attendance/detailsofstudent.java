@@ -50,6 +50,16 @@ public class detailsofstudent extends SQLiteOpenHelper {
         return cursor;
     }
 
+
+    public Cursor selectData(){
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        String branch = null;
+        String[] whreArg = {branch};
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM STUDETAIL WHERE Branch = ? ",whreArg);
+        return cursor;
+    }
+
+
     public void onDelete(String name) {
         SQLiteDatabase sqLiteDatabase =  getWritableDatabase();
         String[] whreArg = {name};
