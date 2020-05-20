@@ -21,7 +21,7 @@ public class detailsofstudent extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE STUDETAIL(" +
                 "Name text," +
-                "Rollno text,"+"Branch text," +"Semester text,"+
+                "Rollno text,"+"Branch text," +"Semester text,"+"Attend text,"+
                 "MobileNo text)");
 
     }
@@ -38,6 +38,7 @@ public class detailsofstudent extends SQLiteOpenHelper {
         contentValues.put("Branch", branch_stu);
         contentValues.put("Semester", semester_stu);
         contentValues.put("MobileNo", mobile_stu);
+        //contentValues.put("ATTEND", attend_stu);
 
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         sqLiteDatabase.insert("STUDETAIL", null, contentValues);
@@ -51,11 +52,11 @@ public class detailsofstudent extends SQLiteOpenHelper {
     }
 
 
-    public Cursor selectData(){
+    public Cursor selectData(String branch){
         SQLiteDatabase sqLiteDatabase = getReadableDatabase();
-        String branch = null;
-        String[] whreArg = {branch};
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM STUDETAIL WHERE Branch = ? ",whreArg);
+
+        //String[] whreArg = {branch};
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM STUDETAIL WHERE Branch = "+branch+ "''",null);
         return cursor;
     }
 

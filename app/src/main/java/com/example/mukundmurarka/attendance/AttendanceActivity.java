@@ -47,18 +47,12 @@ public class AttendanceActivity extends AppCompatActivity {
         tv = (EditText)findViewById(R.id.cccc) ;
 
 
-
-
-
-
-
-
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 rid = rg.getCheckedRadioButtonId();
                 rb = findViewById(rid);
-              // String branch = tv.getText().toString();
+                 tv.setText(rb.getText());
 //                namelist.add(branch);
 //                lv.setAdapter(arrayAdapter);
 
@@ -66,16 +60,15 @@ public class AttendanceActivity extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
         totallist= new  ArrayList<>();
         namelist = new ArrayList<>();
 
+        String search= tv.getText().toString().trim();
+
         studentdetail= new detailsofstudent(AttendanceActivity.this);
-        Cursor cursor = studentdetail.getData();
+        Cursor cursor;
+        cursor = studentdetail.getData();
+        //Cursor cursor = sqLiteDatabase.rawQuery("Select * From STUDETAIL where Branch =" + tv.setText(rb.getText().toString().trim())+,null );
         sqLiteDatabase = studentdetail.getWritableDatabase();
 
 
@@ -110,14 +103,7 @@ public class AttendanceActivity extends AppCompatActivity {
 
                     public void onClick(DialogInterface dialog, int which) {
 
-//                        studentdetail.onDelete(namelist.get(position));
-//
-//                        totallist.remove(position);
-//
-//                        arrayAdapter.notifyDataSetChanged();
-//
                        Toast.makeText(AttendanceActivity.this, "you are present ", Toast.LENGTH_LONG).show();
-//                        //
 
                         dialog.dismiss();
                     }
@@ -129,39 +115,20 @@ public class AttendanceActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
 
                         Toast.makeText(AttendanceActivity.this, "you are present ", Toast.LENGTH_LONG).show();
-                        // Do nothing
-//                        dialog.dismiss();
                     }
                 });
-
                 AlertDialog alert = builder.create();
                 alert.show();
 
                 return true;
             }
-
         });
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
     public  void checkbtn(View v){
         rid = rg.getCheckedRadioButtonId();
         rb = findViewById(rid);
-        String rb1 = rb.getText().toString();
-        Toast.makeText(AttendanceActivity.this, "select branch" + rb1, Toast.LENGTH_SHORT).show();
+        //String rb1 = rb.getText().toString();
+        Toast.makeText(AttendanceActivity.this, "select branch" + rb.getText(), Toast.LENGTH_SHORT).show();
     }
 
 }
