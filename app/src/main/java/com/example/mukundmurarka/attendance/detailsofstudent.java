@@ -28,8 +28,11 @@ public class detailsofstudent extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS STUDETAIL");
+        if (newVersion>oldVersion){
+        sqLiteDatabase.execSQL("ALTER Tble");
         onCreate(sqLiteDatabase);
+        }
+
     }
     public void addData(String name_stu, String roll_stu, String branch_stu, String semester_stu, String mobile_stu){
         ContentValues contentValues = new ContentValues();
@@ -52,11 +55,11 @@ public class detailsofstudent extends SQLiteOpenHelper {
     }
 
 
-    public Cursor selectData(String branch){
+    public Cursor selectData(String branch_stu){
         SQLiteDatabase sqLiteDatabase = getReadableDatabase();
 
-        //String[] whreArg = {branch};
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM STUDETAIL WHERE Branch = "+branch+ "''",null);
+        String[] whreArg = {branch_stu};
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM STUDETAIL WHERE Branch = ? " ,whreArg);
         return cursor;
     }
 
