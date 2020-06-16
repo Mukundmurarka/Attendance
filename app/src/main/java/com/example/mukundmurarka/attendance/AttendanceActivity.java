@@ -100,6 +100,7 @@ public class AttendanceActivity extends AppCompatActivity {
 
                             public void onClick(DialogInterface dialog, int which) {
 
+
                                 Toast.makeText(AttendanceActivity.this, "you are present ", Toast.LENGTH_LONG).show();
 
                                 dialog.dismiss();

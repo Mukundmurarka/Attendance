@@ -29,7 +29,7 @@ public class detailsofstudent extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
         if (newVersion>oldVersion){
-        sqLiteDatabase.execSQL("ALTER Tble");
+        sqLiteDatabase.execSQL("ALTER Table STUDETAIL ADD COLUMN Attend text");
         onCreate(sqLiteDatabase);
         }
 

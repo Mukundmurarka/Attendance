@@ -23,7 +23,7 @@
             android:layout_width="79dp"
             android:layout_height="40dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="119dp"
+            android:layout_marginTop="151dp"
             android:layout_toStartOf="@+id/submit"
             android:text="@string/name"
             android:textColor="@android:color/background_dark"
@@ -36,8 +36,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/name"
-            android:layout_marginTop="176dp"
-            android:text="@string/rollno"
+            android:layout_marginTop="209dp"
+            android:text="Address"
             android:textColor="@android:color/background_dark"
             android:textSize="24sp" />
 
@@ -62,7 +62,7 @@
             android:layout_alignTop="@+id/rollno"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:hint="@string/roll_no"
+            android:hint="address"
             android:inputType="textPersonName"
             android:textSize="18sp"
             tools:ignore="RtlCompat" />
@@ -71,9 +71,8 @@
             android:id="@+id/branch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/name"
-            android:layout_marginTop="224dp"
+            android:layout_centerVertical="true"
             android:text="@string/branc"
             android:textColor="@android:color/background_dark"
             android:textSize="24sp" />
@@ -82,33 +81,10 @@
             android:id="@+id/bran"
             android:layout_width="237dp"
             android:layout_height="43dp"
-            android:layout_alignLeft="@+id/full_name"
             android:layout_alignStart="@+id/full_name"
-            android:layout_alignTop="@+id/branch"
+            android:layout_centerVertical="true"
             android:ems="10"
             android:hint="@string/branch"
-            android:inputType="textPersonName"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/samester"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/name"
-            android:layout_centerVertical="true"
-            android:text="@string/sameste"
-            android:textColor="@android:color/background_dark"
-            android:textSize="24sp" />
-
-        <EditText
-            android:id="@+id/sem"
-            android:layout_width="wrap_content"
-            android:layout_height="43dp"
-            android:layout_alignEnd="@+id/full_name"
-            android:layout_alignRight="@+id/full_name"
-            android:layout_alignTop="@+id/samester"
-            android:ems="10"
-            android:hint="@string/samester"
             android:inputType="textPersonName"
             android:textSize="18sp" />
 
@@ -171,15 +147,14 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
+            android:layout_width="324dp"
+            android:layout_height="51dp"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="39dp"
-            android:layout_marginTop="51dp"
-            android:text="STUDENT'S RAGISTRATION"
+            android:layout_alignStart="@+id/name"
+            android:layout_marginTop="71dp"
+            android:text="ADMIN RAGISTRATION"
             android:textColor="@android:color/background_dark"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
     </RelativeLayout>
